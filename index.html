@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우유안부</title>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 스와이퍼 라이브러리 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- 테일윈드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 공통 CSS 연결 -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- 공통 Js 연결 -->
+    <script defer src="js/common.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="pc-top-bar">
+        <div class="pc-top-bar-wrap h-[170px]">
+            <div class="con mx-auto flex h-full">
+                <div class="flex items-center justify-center w-full">
+                    <h1 class="text-center">
+                        <a href="#" class="top-bar-logo text-center">
+                            <span class="headerM1">
+                                <img src="images/logo.png"
+                                    alt="어른신의 안부를 묻는 우유배달">
+                            </span>
+                            <span class="headerM2 mt-[10px]">
+                                <img src="images/logoText.png"
+                                    alt="소화가 잘되는 우유, 1%의 약속">
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 팝업 -->
+    <div class="main-popup-box" id="main-popup-box">
+        <div class="popup-wrap" id="popup-wrap">
+            <div class="letter-box">
+                <div class="swiper swiper-container letter-wrap">
+                    <ul class="swiper-wrapper letter-list">
+                        <li class="swiper-slide swiper-slide-1">
+                            <img src="images/letter_1.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-2">
+                            <img src="images/letter_2.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-3">
+                            <img src="images/letter_3.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-4">
+                            <img src="images/letter_4.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-5">
+                            <img src="images/letter_5.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-6">
+                            <img src="images/letter_6.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-7">
+                            <img src="images/letter_7.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-8">
+                            <img src="images/letter_8.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-9">
+                            <img src="images/letter_9.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-10">
+                            <img src="images/letter_10.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-11">
+                            <img src="images/letter_11.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-12">
+                            <img src="images/letter_12.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-13">
+                            <img src="images/letter_13.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-14">
+                            <img src="images/letter_14.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-15">
+                            <img src="images/letter_15.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-16">
+                            <img src="images/letter_16.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-17">
+                            <img src="images/letter_17.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-18">
+                            <img src="images/letter_18.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-19">
+                            <img src="images/letter_19.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-20">
+                            <img src="images/letter_20.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-21">
+                            <img src="images/letter_21.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-22">
+                            <img src="images/letter_22.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-23">
+                            <img src="images/letter_23.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-24">
+                            <img src="images/letter_24.png" alt="">
+                        </li>
+                        <li class="swiper-slide swiper-slide-25">
+                            <img src="images/letter_25.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="letter-swiper-btn">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="todayclose" id="today-close">
+                <a href="#">
+                    <label for="cp_todayClose">오늘 하루동안 보지 않기</label>
+                    <input type="checkbox" value="checkbox" name="cp_todayClose" id="cp_todayClose">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main-popup-bg" id="main-popup-bg"></div>
+
+    <!-- 구역 1 -->
+    <section class="section-1">
+        <div class="sec-1-wrap mx-auto h-[970px]">
+            <div class="con mx-auto">
+                <div class="sec-1-1 text-center">
+                    <p>소화가 잘되는 우유는 매출의 1%를</p>
+                    <div class="flex justify-center">
+                        <span>사단법인 어르신의 안부를 묻는 우유배달</span>
+                        <p>에</p>
+                    </div>
+                    <p>기부합니다.</p>
+                    <div class="flex justify-center pt-[20px]">
+                        <img src="images/icon_visual.png" alt="우유아이콘">
+                    </div>
+                </div>
+                <div class="sec-1-2">
+                    <div class="video-tab-list">
+                        <ul class="videotap">
+                            <li class="tab active" onclick="showTab('tab01', this)">
+                                <a href="javascript:;">1편</a>
+                            </li>
+                            <li class="tab" onclick="showTab('tab02', this)">
+                                <a href="javascript:;">2편</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="video-tab-box">
+                        <div id="tab01" class="video-box">
+                            <iframe width="680" height="383"
+                                src="https://www.youtube.com/embed/N1ozirsbePY?loop=1&amp;playlist=N1ozirsbePY&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.chakanmilk.com"
+                                title="우유로 어떻게 안부를 전해요?(Greeting Milk) #매일유업 #소화가잘되는우유" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" data-gtm-yt-inspected-30313752_12="true" id="683251307"></iframe>
+                        </div>
+                        <div id="tab02" class="video-box">
+                            <iframe width="680" height="383"
+                                src="https://www.youtube.com/embed/duh5MXctL1Y?loop=1&amp;playlist=duh5MXctL1Y&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.chakanmilk.com"
+                                title="[우유안부] 함께, 어르신의 안부를 물어요" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" data-gtm-yt-inspected-30313752_12="true" id="241398113"></iframe>
+                        </div>
+                    </div>
+                    <div class="btn-area mt-[25px] flex justify-center">
+                        <a href="javascript:;">
+                            <img src="images/btn_sec01.png" alt="개인후원참여">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 구역 2 -->
+    <section class="section-2">
+        <div class="sec-2-wrap mx-auto">
+            <div class="sec-2-1 text-center pt-[50px]">
+                <div class="con mx-auto">
+                    <ul>
+                        <li>
+                            <b class="font-bold">매일유업</b>
+                            은 독거노인의 영양을 보충하고 안부를 헤아릴 수 있도록
+                        </li>
+                        <li>
+                            1년에 365개의 우유를 배달하는 나눔 기부활동에 2016년 1월부터 동참하게 되었습니다.
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <b class="font-bold text-purple">유당이 없는 소화가 잘되는 우유</b>
+                            는 누구나 불편함 없이 마실 수 있는 락토프리 우유로,
+                        </li>
+                        <li>
+                            특히 칼슘과 단백질 등의 영양이 부족하기 쉬운 어르신들의 간편한 영양보충을 위해
+                        </li>
+                        <li>
+                            나눔 기부 활동에 동참하고 있습니다.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sec-2-2 h-[459px]">
+                <div class="con mx-auto">
+                    <div class="pt-[30px] text-center">
+                        <p class="font-bold text-purple text-[34px]">
+                            함께, 어르신의 안부를 물어요
+                        </p>
+                        <p class="pt-[10px] text-[22px]">
+                            사단법인 어르신의 안부를 묻는 우유배달을 통해
+                        </p>
+                        <span class="text-[22px]">
+                            <b class="text-purple text-[30px]">개인후원</b>
+                            <b class="text-purple font-normal">(정기/일시후원)</b>
+                            <b class="text-[30px]">에 참여할 수 있어요.</b>
+                        </span>
+                    </div>
+                    <div class="support-btn pt-[30px]">
+                        <a href="javascript:;">
+                            <img src="images/btn01.gif" alt="후원하기">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-2-3 text-center">
+                <div class="con mx-auto">
+                    <div class="sec-2-3-1">
+                        <ul>
+                            <li>
+                                <img src="images/sectionTit.png"
+                                    alt="어르신께 따뜻한 안부를 전하세요">
+                            </li>
+                            <li class="prizetext">
+                                ‘소잘라떼’를 즐길 수 있는
+                                &nbsp;
+                                <b class="text-yellow">폴바셋 커피교환권(매달 5명) </b>
+                                &nbsp;
+                                증정
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sec-2-3-2">
+                        <a href="javascript:;" class="anbu-btn" id="open-popup-btn">안부 메시지 쓰기 ></a>
+                    </div>
+                    <div class="anbu-popup-box" id="anbu-popup-box">
+                        <div class="popup-wrap">
+                            <div class="popup-con-1 text-center">
+                                <h1 class="flex justify-center">
+                                    <img src="images/iconImg01.png" alt="편지 아이콘">
+                                </h1>
+                                <div class="pop-title">
+                                    <p>
+                                        <b class="font-bold">따뜻한 안부 메시지 한 줄</b>이
+                                    </p>
+                                    <p>어르신께는 큰 힘이 됩니다.</p>
+                                </div>
+                                <div class="pop-title-2">
+                                    <p>어르신께 안부 메시지를 남겨주세요.</p>
+                                    <p>
+                                        <b class="font-normal underline">매달 5분께 폴바셋 커피 교환권</b>을 드립니다.
+                                    </p>
+                                </div>
+                                <div class="coupon-img">
+                                    <img src="images/popProoduct.png"
+                                        alt="폴바셋 커피">
+                                </div>
+                                <div class="coupon-com text-center">
+                                    <div class="flex justify-center">
+                                        <img src="images/popCom.png"
+                                            alt="폴바셋 로고">
+                                    </div>
+                                    <p class="pt-[10px]">
+                                        라떼 주문시 <b>소화가 잘되는 우유를</b>
+                                    </p>
+                                    <p>
+                                        <b>옵션으로 선택</b>하실 수 있어요!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="popup-con-2 p-[25px]">
+                                <div class="textarea">
+                                    <textarea type="text" maxlength="80" placeholder="안부 메시지를 남겨주세요" id="addText"
+                                        class="h-[130px] p-[10px] w-full"></textarea>
+                                </div>
+                                <ul class="userinfoarea">
+                                    <li>
+                                        <label for="name">성명</label>
+                                        <input type="text" name="name" id="name">
+                                    </li>
+                                    <li>
+                                        <label for="num1">연락처</label>
+                                        <div class="numWrap flex gap-x-[20px]">
+                                            <span><b>010</b></span>
+                                            <span>
+                                                <input type="text" maxlength="4" id="num2"
+                                                    onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                            </span>
+                                            <span>
+                                                <input type="text" maxlength="4" id="num3"
+                                                    onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="checkarea">
+                                    <input type="checkbox" id="agreeArea" name="agree">
+                                    <label for="agreeArea">개인정보제공 동의</label>
+                                </div>
+                                <ul class="pop-infobox">
+                                    <li>제공 기관: 매일유업</li>
+                                    <li>제공 목적: 경품 발송</li>
+                                    <li>제공 항목: 성명, 휴대폰번호</li>
+                                    <li>보유 및 이용기간: 이벤트 종료시까지</li>
+                                </ul>
+                            </div>
+                            <div class="btnarea pb-[30px]">
+                                <a href="javascript:;">
+                                    메시지 보내기 >
+                                </a>
+                            </div>
+                            <!-- 닫기 버튼 -->
+                            <a href="javascript:;" class="close-btn" id="close-btn">
+                                <img src="images/popClose.png" alt="팝업닫기">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 구역 3 -->
+    <section class="sec-3">
+        <div class="sec-3-wrap">
+            <div class="con mx-auto">
+                <h1>
+                    <img src="images/logoBig.png" alt="어른신의 안부를 묻는 우유배달">
+                </h1>
+                <div class="title-box">
+                    <ul class="title text-[34px] font-bold">
+                        <li>소화가 잘되는 우유 구매하고,</li>
+                        <li>어르신의 안부를 함께 물어주세요.</li>
+                    </ul>
+                    <ul class="sub-title text-[22px] pt-[10px]">
+                        <li>
+                            소화가 잘되는 우유는 매출의 1%를
+                        </li>
+                        <li>
+                            (사)어르신의 안부를 묻는 우유배달에 기부합니다.
+                        </li>
+                    </ul>
+                </div>
+                <div class="milk-wrap">
+                    <div class="milk-title">
+                        <img src="images/cont01.png"
+                            alt="유당0% 락토프리 우유 소화가 잘되는 우유">
+                    </div>
+                    <div class="mink-slides mx-auto w-[890px]">
+                        <div class="swiper swiper-container">
+                            <ul class="swiper-wrapper flex milk-list">
+                                <li class="swiper-slide swiper-slide-1">
+                                    <div class="tumb">
+                                        <img src="images/productImg01.png"
+                                            alt="소화가 잘되는 우유 오리지널 멸균">
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 오리지널 멸균 190mlx24팩</p>
+                                    <div class="milk-btn">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-2">
+                                    <div class="tumb">
+                                        <img src="images/productImg02.png"
+                                            alt="소화가 잘되는 우유 저지방 멸균">
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 저지방 멸균 190mlx24팩</p>
+                                    <div class="milk-btn">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-3">
+                                    <div class="tumb">
+                                        <img src="images/productImg03.png"
+                                            alt="소화가 잘되는 우유 멸균 바나나">
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 멸균 바나나 190mlx24팩</p>
+                                    <div class="milk-btn">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-4">
+                                    <div class="tumb">
+                                        <img src="images/productImg04.png"
+                                            alt="소화가 잘되는 우유 멸균 초콜릿">
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 멸균 초콜릿 190mlx24팩</p>
+                                    <div class="milk-btn">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-5">
+                                    <div class="tumb">
+                                        <img src="images/productImg09.png"
+                                            alt="소화가 잘되는 우유 오리지널">
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 멸균 미숫가루 190mlx24팩</p>
+                                    <div class="milk-btn milk-btn-2">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-6">
+                                    <div class="tumb relative">
+                                        <img src="images/productImg06.png"
+                                            alt="소화가 잘되는 우유 오리지널">
+                                        <div class="deliveryIcon">
+                                            <img src="images/iconImg05.png"
+                                                alt="가정배달아이콘">
+                                        </div>
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 오리지널 930ml</p>
+                                    <div class="milk-btn milk-btn-2">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-7">
+                                    <div class="tumb relative">
+                                        <img src="images/productImg07.png"
+                                            alt="소화가 잘되는 우유 저지방">
+                                        <div class="deliveryIcon">
+                                            <img src="images/iconImg05.png"
+                                                alt="가정배달아이콘">
+                                        </div>
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 저지방 930ml</p>
+                                    &nbsp;
+                                    <div class="milk-btn milk-btn-2">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide swiper-slide-8">
+                                    <div class="tumb relative">
+                                        <img src="images/productImg08.png"
+                                            alt="소화가 잘되는 우유 오리지널">
+                                        <div class="deliveryIcon">
+                                            <img src="images/iconImg05.png"
+                                                alt="가정배달아이콘">
+                                        </div>
+                                    </div>
+                                    <p class="milk-name">소화가 잘되는 우유 오리지널 180ml</p>
+                                    <div class="milk-btn milk-btn-2">
+                                        <a href="#">구매하기</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="milk-swiper-btn">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 구역 4 -->
+    <section class="sec-4">
+        <div class="sec-4-wrap">
+            <div class="con mx-auto">
+                <div class="sec-4-title text-center">
+                    <p>우유안부 스토리</p>
+                </div>
+                <div class="sec-4-story">
+                    <div class="tab-content on" id="content1">
+                        <div class="tab-con-1 mx-auto">
+                            <div class="swiper swiper-container mx-auto">
+                                <ul class="swiper-wrapper tab-con-1-list w-[562px]">
+                                    <li class="swiper-slide swiper-slide-1">
+                                        <img src="images/cardThum1_01.jpg"
+                                            alt="이른 아침,어르신께 배달되는 우유가안부를 묻는 따뜻한 신호라는걸 알고 계셨나요?">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-2">
+                                        <img src="images/cardThum1_02.jpg" alt="가족의 손길이 닿기 어려운 어르신께이른 아침, 매일유업 가정배달원이매일 소화가 잘되는 우유로 안부를 전합니다.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-3">
+                                        <img src="images/cardThum1_03.jpg"
+                                            alt="다음날 문 앞에 놓인우유의 개수가 안부의 신호가 되어 우유가 없다면 양호 1개 있다면 주의 2개 있다면 위험">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-4">
+                                        <img src="images/cardThum1_04.jpg"
+                                            alt="주민센터를 통해 어르신의 안부를 확인합니다.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-5">
+                                        <img src="images/cardThum1_05.jpg"
+                                            alt="‘어르신의 안부를 묻는 우유배달’은 달동네 가난한 노인들의 안부를 헤아릴 방법을 찾던 끝에 2003년 옥수중앙교회에서 시작되었습니다.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-6">
+                                        <img src="images/cardThum1_06.jpg"
+                                            alt="홀로 지내시는 어르신께 이른 아침 한개의 우유로 전하는 따뜻한 안부!">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-7">
+                                        <img src="images/cardThum1_07.jpg"
+                                            alt="매일 소화가 잘되는 우유를 구매하는 것만으로도 어르신의 안부를 묻는 우유안부 캠페인 에 동참하실 수 있습니다.">
+                                    </li>
+                                </ul>
+                                <div class="tab-con-1-swiper-btn con-swiper-btn">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content2">
+                        <div class="tab-con-2 mx-auto">
+                            <div class="swiper swiper-container mx-auto">
+                                <ul class="swiper-wrapper tab-con-2-list w-[562px]">
+                                    <li class="swiper-slide swiper-slide-1">
+                                        <img src="images/cardThum2_01.jpg"
+                                            alt="새벽을 달려 어르신의 안부를 묻는 영웅들">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-2">
+                                        <img src="images/cardThum2_02.jpg
+    " alt="걸어서 배달해야 하는 곳이 많아 일반 가정보다 3배 더 걸려요">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-3">
+                                        <img src="images/cardThum2_03.jpg"
+                                            alt="실제로 차로 갈 수 없는 곳도 많죠">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-4">
+                                        <img src="images/cardThum2_04.jpg"
+                                            alt="어르신들의 주거 환경이 열악해 반지하로 내려갔다가 또 옥탑방으로 올라갔다가를 반복합니다">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-5">
+                                        <img src="images/cardThum1_05.jpg"
+                                            alt="매일 밤 12시부터 아침 7시까지 배달합니다">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-6">
+                                        <img src="images/cardThum2_06.jpg"
+                                            alt="매일 밤 12시부터 아침 7시까지 배달합니다">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-7">
+                                        <img src="images/cardThum2_07.jpg"
+                                            alt="오늘도 어르신들의 안부를 묻는 우유배달은 멈추지 않습니다">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-8">
+                                        <img src="images/cardThum2_08.jpg"
+                                            alt="소화가 잘 되는 우유를 구매하는 것만으로도 어르신의 안부를 묻는 우유배달에 함께하실 수 있습니다.">
+                                    </li>
+                                </ul>
+                                <div class="tab-con-2-swiper-btn con-swiper-btn">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content3">
+                        <div class="tab-con-3 mx-auto">
+                            <div class="swiper swiper-container mx-auto">
+                                <ul class="swiper-wrapper tab-con-3-list w-[562px]">
+                                    <li class="swiper-slide swiper-slide-1">
+                                        <img src="images/cardThum3_01.jpg"
+                                            alt="김종욱 할아버지께 안부를 묻는 방법">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-2">
+                                        <img src="images/cardThum3_02.jpg
+    " alt="보라색 우유 주머니에 새겨진 특별한 주의 문구 '다른 분께서 가져가시면 안 돼요!'">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-3">
+                                        <img src="images/cardThum3_03.jpg"
+                                            alt="보라색 보냉 주머니 속 우유의 개수가 어르신의 안부를 묻는 특별한 신호가 되기 때문입니다">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-4">
+                                        <img src="images/cardThum3_04.jpg"
+                                            alt="작년 한해 동안 서울시 18개 지역의 어르신 약 2,380분들꼐 총 732,260개의 우유로 안부를 물었습니다.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-5">
+                                        <img src="images/cardThum3_05.jpg"
+                                            alt="매일유업은 소화가 잘 되는 우유, 1%약속 캠페인을 통해 소화가 잘 되는 우유 매출액의 1%를 사단법인 어르신의 안부를 묻는 우유배달에 기부하고 있습니다.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-6">
+                                        <img src="images/cardThum3_06.jpg"
+                                            alt="소화가 잘 되는 우유 스페셜 체험팩 판매에 함께 참여한 고객 20만명의 뜻을 모아 3억원의 기부금을 추가로 전달하였습니다.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-7">
+                                        <img src="images/cardThum3_07.jpg"
+                                            alt="소화가 잘 되는 우유를 구매하는 것만으로도 어르신의 안부를 묻는 우유배달에 함께하실 수 있습니다.">
+                                    </li>
+                                </ul>
+                                <div class="tab-con-3-swiper-btn con-swiper-btn">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="content4">
+                        <div class="tab-con-4 mx-auto">
+                            <div class="swiper swiper-container mx-auto">
+                                <ul class="swiper-wrapper tab-con-4-list w-[562px]">
+                                    <li class="swiper-slide swiper-slide-1">
+                                        <img src="images/cardThum4_01.jpg"
+                                            alt="혼자 지내시는 아버지가 생각 나 어르신의 안부를 묻는 우유배달>에 개인후원을 하게 됐어요">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-2">
+                                        <img src="images/cardThum4_02.jpg" alt="도대체 왜 전화를 안 받으시는 거예요?">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-3">
+                                        <img src="images/cardThum4_03.jpg"
+                                            alt="걱정스러운 마음에 아버지께 짜증을 내고 말았네요.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-4">
+                                        <img src="images/cardThum4_04.jpg"
+                                            alt="어머니 돌아가시고 혼자 지내시는 아버지. 어쩌다 전화를 안 받으시면 어디 잘못된 것은 아닌지 가슴이 덜컥 내려앉습니다">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-5">
+                                        <img src="images/cardThum4_05.jpg"
+                                            alt="그런데, 어느 날 우유를 마시다가 '어르신의 안부를 묻는 우유 배달'이라는 것을 알게 됐어요. 홀로 지내시는 어르신들의 고독사를 방지하기 위해 시작된 활동으로">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-6">
+                                        <img src="images/cardThum4_06.jpg"
+                                            alt="우유로 어르신들의 영양을 챙기는 것은 물론, 매일의 안부를 확인하면서 어르신들꼐 따뜻한 위안이 되어 드리고 있어요.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-7">
+                                        <img src="images/cardThum4_07.jpg"
+                                            alt="제가 아버지께 매일 전화로 안부를 묻듯, 의지할 곳 없이 홀로 지내시는 어르신들께 우유로 안부를 물을 수 있다는 것을 알고 바로 개인 기부 신청을 하게 됐어요.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-8">
+                                        <img src="images/cardThum4_08.jpg"
+                                            alt="제 작은 정성으로, 어르신 한 분이라도 더 안부를 물을 수 있다면 더 바라는 건 없어요.">
+                                    </li>
+                                    <li class="swiper-slide swiper-slide-9">
+                                        <img src="images/cardThum4_09.jpg"
+                                            alt="개인 후원을 통해 홀로 계시는 어르신의 안부를 물어주세요. 한 어르신께 일주일 간 안부를 묻기 위해 약 5,000원의 후원금이 쓰여집니다. 일시후원도 가능합니다.">
+                                    </li>
+                                </ul>
+                                <div class="tab-con-4-swiper-btn con-swiper-btn">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec-4-tab">
+                    <ul class="flex justify-center">
+                        <li class="tab-btn on">
+                            <a href="javascript:;">
+                                <img src="images/cardThum1_01.jpg" alt="썸네일">
+                                <span>1화</span>
+                            </a>
+                        </li>
+                        <li class="tab-btn">
+                            <a href="javascript:;">
+                                <img src="images/cardThum2_01.jpg" alt="썸네일">
+                                <span>2화</span>
+                            </a>
+                        </li>
+                        <li class="tab-btn">
+                            <a href="javascript:;">
+                                <img src="images/cardThum3_01.jpg" alt="썸네일">
+                                <span>3화</span>
+                            </a>
+                        </li>
+                        <li class="tab-btn">
+                            <a href="javascript:;">
+                                <img src="images/cardThum4_01.jpg" alt="썸네일">
+                                <span>4화</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 구역 5 -->
+    <section class="sec-5">
+        <div class="sec-5-wrap">
+            <div class="sec-5-1">
+                <div class="con mx-auto">
+                    <ul class="newslist">
+                        <li>
+                            <a href="#">
+                                <p>독거노인 찾아 19년간 우유배달…이제 강원 산간까지 보내요</p>
+                                <span class="more_btn">more</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>보라색 우유팩 뒤 QR코드의 비밀 아세요?</p>
+                                <span class="more_btn">more</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>180ML 우유로 전하는 사랑</p>
+                                <span class="more_btn">more</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sec-5-2">
+                <div class="mx-auto con">
+                    <h1>함께하는 기업들</h1>
+                    <div class="support-slides mx-auto pb-20px w-[980px]">
+                        <div class="swiper swiper-container">
+                            <ul class="swiper-wrapper flex support-list">
+                                <li class="swiper-slide swiper-slide-1">
+                                    <img src="images/company01.png"
+                                        alt="우아한 형제들">
+                                </li>
+                                <li class="swiper-slide swiper-slide-2">
+                                    <img src="images/company02.png"
+                                        alt="goldmansachs">
+                                </li>
+                                <li class="swiper-slide swiper-slide-3">
+                                    <img src="images/company03.png" alt="매일유업">
+                                </li>
+                                <li class="swiper-slide swiper-slide-4">
+                                    <img src="images/company04.png"
+                                        alt="10mnds">
+                                </li>
+                                <li class="swiper-slide swiper-slide-5">
+                                    <img src="images/company05.png" alt="열심히">
+                                </li>
+                                <li class="swiper-slide swiper-slide-6">
+                                    <img src="images/company07.png" alt="PENTABREED">
+                                </li>
+                                <li class="swiper-slide swiper-slide-7">
+                                    <img src="images/company08.png" alt="INNORED">
+                                </li>
+                                <li class="swiper-slide swiper-slide-8">
+                                    <img src="images/company09.png" alt="중간계캠퍼스">
+                                </li>
+
+                                <li class="swiper-slide swiper-slide-9">
+                                    <img src="images/company10.png" alt="JAWSDOOD">
+                                </li>
+                                <li class="swiper-slide swiper-slide-10">
+                                    <img src="images/company13.png" alt="JAYJUM">
+                                </li>
+                                <li class="swiper-slide swiper-slide-11">
+                                    <img src="images/company14.png" alt="강북삼성병원">
+                                </li>
+                                <li class="swiper-slide swiper-slide-12">
+                                    <img src="images/company15.png" alt="단꿈교육">
+                                </li>
+                                <li class="swiper-slide swiper-slide-13">
+                                    <img src="images/company16.png" alt="FM">
+                                </li>
+                            </ul>
+                            <div class="support-swiper-btn">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="pc-footer">
+        <div class="pc-footer-wrap">
+            <div class="footer-1">
+                <div class="con mx-auto">
+                    <ul class="info-list flex justify-center">
+                        <li>
+                            <a href="#">
+                                <p class="font-bold">개인정보처리방침</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>이용약관</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="last-info">고객센터</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-2">
+                <div class="con mx-auto">
+                    <h1 class="flex justify-center">
+                        <img src="images/mealLogo.png" alt="매일유업로고">
+                    </h1>
+                    <ul class="info-wrap pt-[10px]">
+                        <li>
+                            서울시 종로구 종로 1길 50 더케이 트윈타워 A동
+                        </li>
+                        <li>
+                            매일유업㈜ 대표전화 : 1588-1539
+                        </li>
+                        <li>
+                            Copyright(c) 2019 by Maeil Dairies Co.Ltd All rights reserved.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

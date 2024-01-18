@@ -1,0 +1,833 @@
+@charset "urf-8";
+
+/* 폰트 */
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
+.spoka * { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+
+html > body {
+	font-family: 'Spoqa Han Sans', sans-serif;
+}
+
+/* 노말라이즈 */
+body, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+* {
+	color: #333;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+/* 라이브러리 */
+.con {
+	max-width: var(--site-width);
+}
+
+.text-purple {
+	color: var(--site-color);
+}
+
+/* 커스텀 */
+:root {
+	--site-width: 1024px;
+	--site-color: #5d358c;
+}
+
+/* 헤더 구현 시작 */
+.pc-top-bar {
+	width: 100%;
+}
+
+.pc-top-bar-wrap {
+	width: 100%;
+	background-color: #f4f4f4;
+	padding: 20px 0;
+
+}
+
+.pc-top-bar-wrap > div > div > h1 > a {
+	width: 100%;
+	display: inline-block;
+}
+
+.pc-top-bar-wrap > div > div > h1 > a > span {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pc-top-bar-wrap  .headerM1 {
+	padding-bottom: 10px;
+}
+
+.pc-top-bar-wrap  .headerM2.fixed {
+	position: fixed;
+	z-index: 22;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	background-color: #f4f4f4;
+	padding: 20px;
+}
+
+/* 헤더 구현 끝 */
+
+/* 구역 1 구현 시작 */
+
+.sec-1-wrap {
+	background: url(../images/visualImg2.jpg) no-repeat 50% 50%;
+}
+
+/* 구역 1-1 구현 시작 */
+.sec-1-1 {
+	padding: 85px 0 12px;
+	font-size: 25px;
+}
+
+.sec-1-1 p {
+	color: #cec3ff;
+	font-weight: 400;
+}
+
+.sec-1-1 span {
+	color: #ffffff;
+	font-weight: 700;
+}
+
+/* 구역 1-2 구현 시작 */
+.sec-1-2 .videotap {
+	display: flex;
+	max-width: 680px;
+	margin: 0 auto;
+	column-gap: 1%;
+}
+
+.tab {
+	width: 49.5%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #d2c5e2;
+}
+
+.tab > a {
+	display: block;
+	font-size: 26px;
+  color: #fff;
+	line-height: 58px;
+}
+
+.tab:hover {
+	background-color: #a385c5;
+}
+
+.active {
+	background-color: #a385c5 !important;
+}
+
+.video-tab-box .video-box {
+	display: none;
+	margin: 0 auto;
+	height: 383px;
+	width: 680px;
+}
+
+.video-tab-box .video-box:first-child {
+	display: block;
+}
+
+/* 구역 1 구현 끝 */
+
+/* 구역 2 구현 시작 */
+
+/* 구역 2-1 */
+.sec-2-1 ul {
+	font-size: 22px;
+	line-height: 42px;
+	padding-bottom: 50px;
+}
+
+.sec-2-1 ul li {
+	color: #666666;
+}
+
+/* 구역 2-2 */
+.sec-2-2 {
+	background: url(../images/mainbg03.jpg)
+		no-repeat 50% 50%;
+}
+
+.support-btn {
+	margin-left: 270px;
+}
+
+/* 구역 2-3 */
+.sec-2-3 {
+	background: url(../images/mainbg01.jpg);
+}
+
+.sec-2-3-1 {
+	padding: 30px 0 40px;
+}
+
+.sec-2-3-1 li {
+	display: flex;
+	justify-content: center;
+}
+
+.prizetext {
+	padding-top: 30px;
+	font-size: 24px;
+	color: white;
+	position: relative;
+}
+
+.prizetext .text-yellow {
+	color: #fff799;
+	font-weight: bold;
+}
+
+.prizetext::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 130px;
+	width: 69px;
+	height: 70px;
+	transform: translateY(-50%);
+	background: url(../images/iconImg06.png) no-repeat 50% 50%;
+}
+
+.sec-2-3-2 {
+	padding: 45px 0 40px;
+  box-sizing: border-box;
+}
+
+.anbu-btn {
+	font-size: 22px;
+  color: #5d358c;
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: #fff799;
+}
+
+/* 팝업 */
+.anbu-popup-box {
+	position: absolute;
+	left: 50%;
+	top: 192%;
+	transform: translateX(-50%);
+	width: 495px;
+	text-align: center;
+	border-radius: 10px;
+	background: #fff;
+	overflow: hidden;
+	z-index: 11;
+}
+
+.anbu-popup-box .popup-con-1 {
+	padding: 40px 0 20px;
+	background: url(../images/popBg.png);
+}
+
+.anbu-popup-box .popup-con-1 .pop-title {
+	padding: 10px 0;
+	font-size: 30px;
+	color: white;
+	display: inline-block;
+}
+
+.anbu-popup-box .pop-title p,
+.anbu-popup-box .pop-title b {
+	color: white;
+}
+
+.anbu-popup-box .pop-title-2 {
+	font-size: 22px;
+}
+
+.anbu-popup-box .pop-title-2 p,
+.anbu-popup-box .pop-title-2 b {
+	color: white;
+}
+
+.anbu-popup-box .coupon-img {
+	width: 278px;
+	height: 278px;
+	overflow: hidden;
+	margin: 35px auto 10px auto;
+	border-radius: 50%;
+}
+
+.anbu-popup-box .coupon-com {
+	font-size: 20px;
+	color: #151515;
+}
+
+.anbu-popup-box .textarea textarea {
+	border: 1px solid #e8e8e8;
+	font-size: 24px;
+}
+
+.anbu-popup-box .userinfoarea {
+	padding: 30px 20px 10px;
+	border-bottom: 1px dashed #e4e4e4;
+}
+
+.anbu-popup-box .userinfoarea li {
+	position: relative;
+	padding-left: 115px;
+	margin-bottom: 15px;
+	font-size: 22px;
+}
+
+.anbu-popup-box .userinfoarea li label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	padding: 3px;
+	line-height: 30px;
+	margin-right: 10px;
+	border-radius: 20px;
+	background: #5d358c;
+	color: #fff;
+}
+
+.userinfoarea li input {
+	border: 1px solid #e8e8e8;
+	font-size: 24px;
+}
+
+.anbu-popup-box .userinfoarea .numWrap span:nth-child(2)::before {
+	content: "-";
+	position: absolute;
+	left: 40%;
+}
+
+.anbu-popup-box .userinfoarea .numWrap span:nth-child(3)::before {
+	content: "-";
+	position: absolute;
+	left: 73.5%;
+}
+
+.anbu-popup-box .userinfoarea .numWrap span:nth-child(2) {
+	padding-left: 10px;
+}
+
+.anbu-popup-box .userinfoarea .numWrap span:nth-child(3) {
+	padding-left: 30px;
+}
+
+.anbu-popup-box .userinfoarea .numWrap input {
+	width: 120%;
+}
+
+.anbu-popup-box .checkarea {
+	padding: 12px 0;
+	text-align: left;
+}
+
+.anbu-popup-box .checkarea input {
+	height: 30px;
+	width: 30px;
+	-webkit-appearance: none;
+	cursor: pointer;
+	border: 0;
+	box-shadow: none;
+	outline: none;
+	border-radius: 0 !important;
+	background: rgba(255, 255, 255, 0) url(../images/check.png) no-repeat 0 0 !important;
+}
+
+.anbu-popup-box .checkarea input:checked {
+	background: rgba(255, 255, 255, 0) url(../images/checked.png) no-repeat 0 0 !important;
+}
+
+.anbu-popup-box .checkarea label {
+	font-size: 18px;
+	margin-left: 5px;
+	line-height: -20px;
+	vertical-align: 6px;
+}
+
+.anbu-popup-box .pop-infobox {
+	padding: 20px;
+	font-size: 16px;
+	text-align: left;
+	background: #f5f5f5;
+}
+
+.anbu-popup-box .pop-infobox li {
+	padding-left: 10px;
+	position: relative;
+}
+
+.anbu-popup-box .pop-infobox li::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -1%;
+	translate: translateY(-70%);
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background: #333333;
+}
+
+.anbu-popup-box .btnarea > a {
+	font-size: 24px;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 40px;
+    background: #55bae4;
+}
+
+.anbu-popup-box .close-btn {
+	position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.anbu-popup-box {
+	display: none;
+}
+
+/* 구역 2 구현 끝 */
+
+/* 구역 3 구현 시작 */
+
+.sec-3-wrap {
+	background-color: #f5f5f5;
+	text-align: center;
+}
+
+.sec-3-wrap h1 {
+	padding: 40px 0 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.title li {
+	color: #5d358c;
+}
+
+/* 우유 상품 구역 */
+.milk-title {
+	padding: 50px 0 20px;
+	display: flex;
+	justify-content: center;
+}
+
+/* 스와이퍼 */
+.milk-list {
+	width: 100%;
+	text-align: center;
+}
+
+.milk-list .swiper-slide {
+	width: 24%;
+	background-color: #fff;
+}
+
+.milk-list .milk-name {
+	margin-top: 10px;
+	padding: 0px 5px;
+	letter-spacing: -1.3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.milk-list .milk-btn {
+	padding: 20px 0;
+	margin: 10px auto;
+}
+
+.milk-list .milk-btn a {
+	background: #55bae4;
+	padding: 8px 35px;
+	font-size: 21px;
+	color: #fff;
+}
+
+.milk-list .milk-btn-2 a {
+	background: var(--site-color);
+	padding: 8px 35px;
+	font-size: 21px;
+	color: #fff;
+}
+
+.deliveryIcon {
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+.milk-swiper-btn {
+	padding: 20px 0 30px;
+}
+
+.milk-swiper-btn .swiper-pagination-bullet {
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	overflow: hidden;
+	border: 1px solid black;
+}
+
+.milk-swiper-btn .swiper-pagination-bullet-active {
+	background: #634587;
+	border-color: #634587;
+}
+
+/* 구역 3 구현 끝 */
+
+/* 구역 4 구현 시작 */
+.sec-4-wrap {
+	padding: 30px 0 45px;
+	background: url(../images/sec10_bg.jpg);
+}
+
+.sec-4-title p {
+	font-size: 34px;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* 탭 슬라이드 */
+.sec-4-story {
+	margin: 30px auto 0;
+}
+
+.tab-content {
+	display: none;
+/* 	border-radius: 20px;
+  border: 2px solid #fff; */
+}
+
+.tab-content.on {
+	display: block;
+}
+
+.tab-content img {
+	border-radius: 20px;
+  border: 2px solid #fff;
+	width: 562px;
+}
+
+.tab-con-1 {
+	position: relative;
+	width: 100%;
+}
+
+.tab-con-1-list, .tab-con-2-list, .tab-con-3-list, .tab-con-4-list {
+	margin-left: 22%;
+}
+
+/* 스와이퍼 버튼 */
+.con-swiper-btn {
+	padding: 30px 0 20px;
+}
+
+.con-swiper-btn .swiper-pagination-bullet {
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	border: 1px solid #c5c5c5;
+	overflow: hidden;
+	opacity: 1;
+}
+
+.con-swiper-btn .swiper-pagination-bullet-active {
+	background: #634587;
+	border-color: #634587;
+}
+
+.con-swiper-btn .swiper-button-prev::after, .con-swiper-btn .swiper-button-next::after {
+	display: none;
+}
+
+.con-swiper-btn .swiper-button-prev, .con-swiper-btn .swiper-button-next {
+	width: 33px;
+  height: 61px;
+}
+
+.con-swiper-btn .swiper-button-prev {
+	left: 18%;
+  background: url(../images/prev.png) no-repeat 50% 50%;
+}
+
+.con-swiper-btn .swiper-button-next {
+	right: 19%;
+	background: url(../images/next.png) no-repeat 50% 50%;
+}
+
+/* 탭 버튼 */
+.sec-4-tab {
+	width: 100%;
+}
+
+.sec-4-tab li {
+	width: 130px;
+	text-align: center;
+	opacity: 0.7;
+}
+
+.sec-4-tab li:not(:last-child) {
+	margin-right: 14px;
+}
+
+.sec-4-tab li a img {
+	width: 100%;
+	border-radius: 10px;
+	border: 2px solid #fff;
+}
+
+.sec-4-tab li a span {
+	font-size: 22px;
+	color: #fff;
+	padding-top: 10px;
+}
+
+.sec-4-tab li.on {
+	opacity: 1;
+}
+
+/* 구역 4 구현 끝 */
+
+/* 구역 5 구현 시작 */
+
+/* 구역 5-1  */
+.sec-5-1 {
+	background-color: #fff;
+}
+
+.sec-5-1 .newslist {
+	padding: 50px 0 80px;
+}
+
+.sec-5-1 .newslist li {
+	padding: 20px 10px;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.sec-5-1 .newslist a {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.sec-5-1 .newslist p {
+	height: 28px;
+	font-size: 18px;
+	padding-right: 70px;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.sec-5-1 .newslist .more_btn {
+	position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 52px;
+  height: 13px;
+  margin-top: -5px;
+  background: url(../images/moreBtn.png) no-repeat;
+	text-indent: -999999px;
+}
+
+/* 구역 5-2 */
+.sec-5-2 {
+	background-color: #f1f1f1;
+}
+
+.sec-5-2 h1 {
+  color: #5d358c;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 30px;
+  padding-bottom: 20px;
+	padding-left: 15px;
+}
+
+.support-slides {
+	padding-bottom: 20px;
+}
+
+.support-list {
+	width: 100%;
+}
+
+.sec-5-2 .support-list li {
+	width: 107px;
+}
+
+.support-swiper-btn {
+	padding: 20px 0 30px;
+}
+
+.support-swiper-btn .swiper-pagination-bullet {
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	overflow: hidden;
+	border: 1px solid black;
+}
+
+.support-swiper-btn .swiper-pagination-bullet-active {
+	background: #634587;
+	border-color: #634587;
+}
+
+/* 구역 5 구현 끝 */
+
+/* 푸터 구현 시작 */
+
+.pc-footer-wrap {
+	background: #3b3b3b;
+	text-align: center;
+}
+
+/* 푸터 1 */
+.pc-footer-wrap .footer-1 {
+	padding: 50px 0 20px;
+  border-bottom: 1px solid #5e5e5e;
+}
+
+.footer-1 .info-list li {
+	vertical-align: top;
+}
+
+.footer-1 .info-list p:not(.last-info)::after {
+	content: '|';
+  display: inline-block;
+  color: #818181;
+  box-sizing: border-box;
+	padding: 0 15px;
+}
+
+.footer-1 .info-list p {
+	color: #d7d7d7;
+}
+
+/* 푸터 2 */
+.footer-2 {
+	padding: 30px 0 70px;
+}
+
+.info-wrap li {
+	color: #818181;
+}
+
+/* 푸터 구현 끝 */
+
+/* 메인 팝업 구현 시작 */
+
+.main-popup-box {
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 478px;
+	height: 1017px;
+	z-index: 1001;
+	background: url(../images/bg_letter.png)
+		no-repeat 0 0;
+}
+
+.letter-box {
+	margin-top: 536px;
+}
+
+.letter-wrap {
+	position: relative;
+}
+
+.letter-wrap .letter-list img {
+	margin: 0 auto;
+}
+
+.letter-swiper-btn .swiper-button-prev {
+	position: absolute;
+	left: 5%;
+	top: 62%;
+	width: 17px;
+	height: 36px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: url(../images/btn_prev.png)
+		no-repeat 0 0;
+}
+
+.letter-swiper-btn .swiper-button-next {
+	position: absolute;
+	right: 7%;
+	top: 62%;
+	width: 17px;
+	height: 36px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: url(../images/btn_next.png)
+		no-repeat 0 0;
+}
+
+.todayclose {
+	background: #fff;
+	margin-right: 20px;
+	margin-top: 21.5%;
+	text-align: right;
+	line-height: 1;
+}
+
+.todayclose label {
+	cursor: pointer;
+	vertical-align: 6px;
+}
+
+.todayclose input {
+	height: 30px;
+	width: 30px;
+	-webkit-appearance: none;
+	cursor: pointer;
+	border: 0;
+	box-shadow: none;
+	outline: none;
+	border-radius: 0 !important;
+	background: rgba(255, 255, 255, 0) url(../images/check.png) no-repeat 0 0 !important;
+}
+
+.main-popup-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+/* 메인 팝업 구현 끝 */
